@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import Conversor from './src/Conversor';
 
+
+
 export default class App extends Component{
 
   constructor(props){
@@ -15,7 +17,8 @@ export default class App extends Component{
   render(){
     return(
       <View style={styles.container}>
-        <Conversor/>
+        <Conversor moedaA={"USD"} moedaB={"BRL"}/>
+        <Conversor moedaA={"EUR"} moedaB={"BRL"}/>
       </View>
     );
   }
@@ -26,6 +29,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    marginTop:50
   },
 });
